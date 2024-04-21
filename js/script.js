@@ -85,7 +85,7 @@ function renderizarImagen(urlImagenDisco) {
     // Crear la etiqueta de imagen para la imagen del punto centro
     var imgPuntoCentro = document.createElement('img');
     imgPuntoCentro.classList.add('puntocentro');
-    imgPuntoCentro.src = '/img/puntocentro.png';
+    imgPuntoCentro.src = '../img/puntocentro.png';
 
     // Limpiar el contenedor antes de agregar las nuevas imágenes
     container.innerHTML = '';
