@@ -1,0 +1,324 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+   background: url('/img/sodawal2.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position-x: 51%;
+}
+
+
+.content-logo-soda img{
+    top: 106px;
+    position: absolute;
+    width: 15rem;
+    left: 28%;
+    
+}
+
+.content-all-page-repvinilo{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+}
+
+.section-content-carrousel-rep-vinilo{
+    display: flex;
+}
+
+
+.box{
+    display: flex;
+    width: 444px;
+    height: 322px;
+    background: url('https://st.depositphotos.com/1719616/2684/i/450/depositphotos_26840409-stock-photo-dark-wood-background.jpg');
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 3px;
+    color: #351e0e;
+    box-shadow: inset 0 0 2px rgb(0 0 0);
+
+}
+
+.handle{
+    position: absolute;
+}
+
+.handle img{
+    top: 167px;
+    left: 17px;
+    position: relative;
+    z-index: -1;
+}
+
+
+.content-tapa {
+    position: absolute;
+    top:0
+}
+
+.content-tapa img{
+    position: relative;
+    width: 629px;
+    left: 7px;
+    height: 194px;
+}
+
+.turntable {
+    width: 418px;
+    height: 300px;
+    background: url('https://st.depositphotos.com/1719616/2684/i/450/depositphotos_26840409-stock-photo-dark-wood-background.jpg');
+    background-position-x: 9px;
+
+    background-size: contain;
+    border-radius: 3%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 76px rgb(0 0 0);
+}
+
+.platter {
+    width: 260px;
+    height: 260px;
+    background: url('/img/plater.png');
+    background-size: cover;
+    
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
+    overflow: hidden;
+}
+
+.record {
+    width: 92%;
+    height: 92%;
+    background: url('/img/vinilo-vacio.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50.9%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*animation: rotate 10s linear infinite;*/
+    overflow: hidden; /* Para recortar la imagen */
+    position: relative; /* Para posicionar la imagen dentro del disco */
+    transition: 0.5s;
+}
+
+
+.disco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;  
+}
+
+.imagen-disco{
+    width: 50%;
+    border-radius: 50%;
+}
+
+
+.puntocentro{
+    position: absolute;
+    width: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: black;
+  
+}
+
+
+
+
+@keyframes rotate {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.arm{
+    cursor: pointer;
+    position: absolute;
+    left: 339px;
+    top: 36px;
+}
+
+.base-palanca{
+    position: absolute;
+    top: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.arm img{
+    position: absolute;
+    width: 50px;
+    transform: rotate(0deg);
+    transition: 0.9s;
+}
+
+/*
+.arm img:hover{
+    transform: translate(-60%, -9%) rotate(47deg);
+}*/
+
+
+
+
+.stylus {
+    width: 2px;
+    height: 20px;
+    background-color: #999;
+    position: absolute;
+    top: -115px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+
+
+
+/*_______SWITCH______*/
+
+
+
+
+
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-carrousel {
+    --widthItem: 150px;
+    --heightItem: 100px;
+    width: var(--widthItem);
+    height: var(--heightItem);
+    perspective: 1000px;
+  }
+  
+  .carrousel {
+    --rotatey: 0;
+    font-size: 4rem;
+    position: relative;
+    transform: rotatey(var(--rotatey));
+    transform-style: preserve-3d;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  .carrousel-item {
+    opacity: 0.5;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: opacity 0.5s;
+  }
+  
+  .carrousel-item:hover {
+    opacity: 1;
+  }
+  
+  .carrousel,
+  .carrousel-item {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .carrousel-item:nth-child(1) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background-image: url('https://th.bing.com/th/id/OIP.RC7Ohbl6ojtFLva9aWllmQHaHa?rs=1&pid=ImgDetMain');
+  
+  }
+  
+  .carrousel-item:nth-child(2) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background-image: url('https://http2.mlstatic.com/D_NQ_NP_853722-MLU72875709733_112023-O.webp');
+  }
+  
+  .carrousel-item:nth-child(3) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background-image: url('https://sodastereo.com/files/albums/soda-stereo.jpg');
+  }
+  .carrousel-item:nth-child(4) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background-image: url('https://static.wixstatic.com/media/d2b333_7e3b6309b00b41ccac78fe111f1901ff~mv2.jpg/v1/fill/w_600,h_616,al_c,q_85,enc_auto/d2b333_7e3b6309b00b41ccac78fe111f1901ff~mv2.jpg');
+  }
+  
+  .carrousel-item:nth-child(5) {
+    --rotate: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background-image: url('https://www.sopitas.com/wp-content/uploads/2018/08/Soda-Stereo-Cancion-animal-primera-portada.jpg');
+  }
+  
+  .carrousel-item:nth-child(6) {
+    --rotatey: 0;
+    transform: rotatey(var(--rotatey)) translatez(var(--tz));
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Dynamo_Tapa_album.jpg');
+  }
+  
+  @media screen and (min-width: 576px) {
+    .container-carrousel {
+    --widthItem: 250px;
+    --heightItem: 200px;
+    }
+  }
+  
+/*-------------------SLIDER TEXT--------------------*/
+
+.content-text{
+    position: absolute;
+}
+
+  .sliding-text {
+    position: relative;
+    right: -122px;
+    bottom: -209px;
+    font-size: 1rem;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: emoji;
+    color: #33e2f0;
+    text-align: center;
+    border-radius: 7%;
+    background: black;
+    border: solid 3px #494949;
+    z-index: 5555;
+  }
+  
+  .text-container {
+    display: inline-block;
+    animation: slide-left 10s linear infinite;
+  }
+  
+  @keyframes slide-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
